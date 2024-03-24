@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="cloud.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Shreyas M | Weather</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h1>Weather Report</h1>
+      <div class="tab-container">
+        <p class="tab" data-userWeather>Your Weather</p>
+        <p class="tab" data-searchWeather>Search Weather</p>
+      </div>
+      <!-- Container -->
+      <div class="weather-container">
+        <!-- grant location access -->
+        <div class="sub-container grant-location-container">
+          <img
+            src="location.png"
+            width="80"
+            height="80"
+            loading="lazy"
+          />
+          <p>Grant Location Access</p>
+          <p data-messageText>Allow Access To Get Weather Information</p>
+          <button class="btn" data-grantAccess>Grant Access</button>
+        </div>
+        <!-- search country form -->
+        <form class="form-container" data-searchForm>
+          <input placeholder="Search for city ..." data-searchInp />
+          <button class="btn" type="submit">
+            <img
+              src="search.png"
+              width="20"
+              height="20"
+              loading="lazy"
+            />
+          </button>
+        </form>
+        <!-- loading screen container -->
+        <div class="sub-container loading-container">
+          <img src="loading.gif" width="150" height="150" />
+          <p>Loading........</p>
+        </div>
+        <!-- show weather info -->
+        <div class="sub-container user-info-container">
+          <div class="name">
+            <p data-cityName></p>
+            <img crossorigin="anonymous" data-countryIcon />
+          </div>
+          <p data-weatherDesc></p>
+          <img class="icon" data-weatherIcon />
+          <p data-temp></p>
+          <div class="parameter-container">
+            <div class="parameter">
+              <img src="wind.png" />
+              <p class="parameter-title">windspeed</p>
+              <p class="parameter-value" data-windspeed></p>
+            </div>
+            <div class="parameter">
+              <img src="humidity.png" />
+              <p class="parameter-title">humidity</p>
+              <p class="parameter-value" data-humidity></p>
+            </div>
+            <div class="parameter">
+              <img src="cloud.png" />
+              <p class="parameter-title">clouds</p>
+              <p class="parameter-value" data-cloudiness></p>
+            </div>
+          </div>
+        </div>
+        <!-- handle api fetch error -->
+        <div class="sub-container api-error-container">
+          <img src="not-found.png" data-notFoundImg />
+          <p data-apiErrorText></p>
+          <button class="btn" data-apiErrorBtn>Retry</button>
+        </div>
+       <div class="footer">
+        <h3>👨‍💻 Developer:- <span id="element"></span></h3>
+        <div class="copyright">
+          &copy;2024 &nbsp; &nbsp; Source Code:
+          <a
+            href="https://github.com/shreyashsan/PRODIGY_WD_04---Weather.git"
+            target="_blank"
+            ><img src="github.png" width="30px" height="30px" alt=""
+          /></a>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Shreyas M"],
+        typeSpeed: 150,
+        loop: true,
+        backSpeed: 100,
+        backDelay: 1000,
+      });
+    </script>
+  </body>
+</html>
