@@ -3,4 +3,7 @@ Prodigy Infotech
 <br>
 TASK 4 - Weather app using Html, Css , Javascript
 
-live link:- https://prodigy-wd-weather-app.netlify.app/
+### Home Page:
+
+<p align="center"><img src="Screenshot (41).png"></p>
+
