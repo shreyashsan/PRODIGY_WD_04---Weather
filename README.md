@@ -1,7 +1,4 @@
-# PRODIGY_WD_05
-Prodigy Infotech 
-<br>
-TASK 4 - Weather app using Html, Css , Javascript
+Weather app using Html, Css , Javascript
 
 ### Home Page:
 
